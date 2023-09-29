@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+/* input:
+5
+1 2 3 4 5
+output:
+1
+2
+3
+4
+5*/
+void main()
+{
+    int j = 0;
+    int *i;
+    scanf("%d", &j);
+    i = (int *)malloc(j); // make a space according to the size
+loop:
+
+    scanf("%s", i); // scanf will stop at the white space
+    printf("%s\n", i);
+
+    if (--j < 1)
+    {
+        goto exit;
+    }
+    goto loop;
+exit:
+}
