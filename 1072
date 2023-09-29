@@ -12,19 +12,27 @@ output:
 5*/
 void main()
 {
-    int j = 0;
-    int *i;
-    scanf("%d", &j);
-    i = (int *)malloc(j); // make a space according to the size
-loop:
+    /*   int j = 0;
+       int *i;
+       scanf("%d", &j);
+       i = (int *)malloc(j); // make a space according to the size
+   loop:
 
-    scanf("%s", i); // scanf will stop at the white space
-    printf("%s\n", i);
+       scanf("%s", i); // scanf will stop at the white space
+       printf("%s\n", i);
 
-    if (--j < 1)
-    {
-        goto exit;
-    }
-    goto loop;
-exit:
+       if (--j < 1)
+       {
+           goto exit;
+       }
+       goto loop;
+   exit:*/
+    // Better solution
+    int n, m;
+    scanf("%d", &n);
+reget:
+    scanf("%d", &m); // m is not a pointer. it grabs the first int from the buffer before the first white space
+    printf("%d\n", m);
+    if (--n != 0)
+        goto reget;
 }
