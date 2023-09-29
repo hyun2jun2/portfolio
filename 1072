@@ -17,8 +17,9 @@ void main()
        scanf("%d", &j);
        i = (int *)malloc(j); // make a space according to the size
    loop:
-
-       scanf("%s", i); // scanf will stop at the white space
+// scanf will stop at the white space
+// pass the addr of pointer
+       scanf("%s", i); 
        printf("%s\n", i);
 
        if (--j < 1)
