@@ -1,0 +1,5 @@
+In C, you can initialize a char* (pointer to a character) to an empty string in a few different ways:
+char* str = ""; strcpy(str, "");
+char* str = strdup("");
+char* str = (char*)malloc(1); str[0] = '\0';
+char str[10] = {'\0'};
