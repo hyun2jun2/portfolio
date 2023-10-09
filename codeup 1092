@@ -7,7 +7,7 @@ void main()
     int d1, d2, d3, i, j, max;
     scanf("%d %d %d", &d1, &d2, &d3);
 
-    if (d1 > d2)
+   /* if (d1 > d2)
     {
         max = d1;
     }
@@ -32,5 +32,11 @@ void main()
     {
         max *= d3;
     }
-    printf("%d ", max);
+    printf("%d ", max);*/
+// better solution
+    while ((i % d1 != 0) || (i % d2 != 0) || (i % d3 != 0))
+    {
+        i++;
+    }
+    printf("%d ", i);
 }
