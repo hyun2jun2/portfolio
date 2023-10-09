@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void main()
+{
+    int d1, d2, d3, i, j, max;
+    scanf("%d %d %d", &d1, &d2, &d3);
+
+    if (d1 > d2)
+    {
+        max = d1;
+    }
+    else
+    {
+        max = d2;
+    }
+    if (max < d3)
+    {
+        max = d3;
+    }
+
+    if (max % d1 != 0)
+    {
+        max *= d1;
+    }
+    if (max % d2 != 0)
+    {
+        max *= d2;
+    }
+    if (max % d3 != 0)
+    {
+        max *= d3;
+    }
+    printf("%d ", max);
+}
